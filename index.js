@@ -1,8 +1,6 @@
 const { Probot } = require("probot");
 
 module.exports = (app) => {
-    console.log("App is loaded");
-
     app.on(["pull_request.opened", "pull_request.synchronize"], async (context) => {
         const pr = context.payload.pull_request;
 
